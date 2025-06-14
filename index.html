@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <style>
+      .line {
+        float: left;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <div>
+      <canvas id="Canvas" width="400" height="400"></canvas>
+    </div>
+    <div>
+      <text style="background-color:lightgreen">Click on the canvas to add points</text>
+      <br>
+      <button onclick="toggleRun()">Start/Stop</button>
+      <div>
+        <input type="range" min="1" max="100" value="55" class="slider line" id="feed-slider">
+        <p>feed: <span id="feed-v"></span></p>
+      </div>
+      <div>
+        <input type="range" min="1" max="100" value="62" class="slider line" id="k-slider">
+        <p>k: <span id="k-v"></span></p>
+      </div>
+      <div>
+        <input type="range" min="1" max="100" value="10" class="slider line" id="Da-slider">
+        <p>Da: <span id="Da-v"></span></p>
+      </div>
+      <div>
+        <input type="range" min="1" max="100" value="5" class="slider line" id="Db-slider">
+        <p>Db: <span id="Db-v"></span></p>
+      </div>
+      </div>
+    
+    <button onclick="clearCanvas()">Clear</button>
+    <button onclick="reset()">Reset</button>
+
+    <div>
+      <br>
+      <text style="background-color: lightgreen;">By tweaking the parameters, you can achieve interesting effects:</text>
+      <br>
+      <button onclick="zebraWaves()">Stripy Waves</button>
+      <br>
+      <button onclick="singleWaves()">Single Waves</button>
+      <br>
+      <button onclick="tunnels()">Tunnels</button>
+      <br>
+      <button onclick="worms()">Worms</button>
+      <br>
+      <button onclick="selfRegulating()">Self-regulating Waves</button>
+      <br>
+      <button onclick="pixelated()">Pixelated</button>
+    </div>
+    
+  </body>
+</html>
